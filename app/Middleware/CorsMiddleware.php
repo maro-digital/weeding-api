@@ -16,6 +16,7 @@ final class CorsMiddleware implements MiddlewareInterface
         }
 
         $header = respond()->getHeader();
+        // $header->set('mode', 'no-cors');
         $header->set('Access-Control-Allow-Origin', '*');
         $header->set('Access-Control-Expose-Headers', 'Authorization, Content-Type, Cache-Control, Content-Disposition');
 
